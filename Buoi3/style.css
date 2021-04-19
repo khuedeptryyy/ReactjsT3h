@@ -1,0 +1,12 @@
+* {
+    padding: 0;
+    margin : 0;
+}
+
+.container {
+    border          : 1px solid blanchedalmond;
+    background-color: blue;
+    width           : 1900px;
+    height          : 1080px;
+
+}
