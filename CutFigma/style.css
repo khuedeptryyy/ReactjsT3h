@@ -3,6 +3,12 @@
     margin : 0;
 }
 
+:root {
+    --color-white: rgb(255, 255, 255);
+    --color-black: rgb(0, 0, 0);
+    --color-gray : rgb(138, 138, 138);
+}
+
 .ligh-3 {
     background-image : url("img/Rectangle\ 9.png");
     background-repeat: no-repeat;
@@ -20,7 +26,7 @@
 }
 
 .menu {
-    color          : white;
+    color          : var(--color-white);
     display        : flex;
     align-items    : center;
     padding        : 0px;
@@ -28,10 +34,17 @@
     justify-content: space-around;
 }
 
+.menu div:hover {
+    color : var(--color-gray);
+    cursor: pointer;
+}
+
 .menu .center {
     align-items: center;
     display    : flex;
+    cursor     : pointer;
 }
+
 
 .right {
     width          : 200px;
@@ -42,9 +55,14 @@
 
 .right i {
     font-size: 25px;
-    color    : white;
+    color    : var(--color-white);
     padding  : 5px;
 }
+
+.right i:hover {
+    color: var(--color-gray);
+}
+
 
 .hero-ligh3 {
     position         : relative;
@@ -65,7 +83,7 @@
     flex-direction: column;
     align-items   : center;
     padding       : 20px;
-    color         : white;
+    color         : var(--color-white);
     margin        : 40px;
     position      : static;
     width         : 412.83px;
@@ -95,7 +113,14 @@
     top             : 0px;
     background-color: #2091F9;
     border          : 0;
-    border-radius   : 10px;
+    border-radius   : 20px;
+    cursor          : pointer;
+    color           : var(--color-white);
+}
+
+.container-buttom .button:hover {
+    color : var(--color-black);
+    border: 1px solid var(--color-black);
 }
 
 .features {
@@ -159,11 +184,20 @@
 }
 
 .button-4 {
-    border       : none;
-    padding      : 10px;
-    width        : 150px;
-    background   : #2091F9;
-    border-radius: 20px;
+    width           : 150px;
+    height          : 40px;
+    left            : 0px;
+    top             : 0px;
+    background-color: #2091F9;
+    border          : 0;
+    border-radius   : 20px;
+    cursor          : pointer;
+    color           : var(--color-white);
+}
+
+.button-4:hover {
+    color : var(--color-black);
+    border: 1px solid var(--color-black);
 }
 
 .light-5 {
@@ -205,6 +239,11 @@
     width        : 200px;
 }
 
+.form input:hover {
+    border : 0.5px solid var(--color-black);
+    padding: 14px;
+}
+
 .button-5 {
     border       : none;
     background   : #2091F9;
@@ -216,9 +255,16 @@
     margin-left  : 10px;
 }
 
+.button-5:hover {
+    color : var(--color-black);
+    cursor: pointer;
+}
+
 .footer {
     background-color: #111;
     color           : white;
+    display         : flex;
+    justify-content : center;
 }
 
 .content-footer {
@@ -283,4 +329,29 @@
 .img-part img {
     margin: -4px;
 
+}
+
+.right1 i:hover {
+    color: var(--color-gray);
+
+}
+
+
+
+@media (width:375px) {
+    .menu {
+        display: none;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .ligh-3 {
+        background-image : url(img/Rectangle\ 9.png);
+        background-repeat: no-repeat;
+
+        background-position-x: center;
+        width                : 1000px;
+    }
 }
